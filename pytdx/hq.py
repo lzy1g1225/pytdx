@@ -228,7 +228,7 @@ if __name__ == '__main__':
     import pprint
 
     api = TdxHq_API()
-    if api.connect('101.227.73.20', 7709):
+    if api.connect('47.103.48.45', 7709):
         log.info("获取股票行情")
         stocks = api.get_security_quotes([(0, "000001"), (1, "600300")])
         pprint.pprint(stocks)
@@ -238,7 +238,7 @@ if __name__ == '__main__':
         log.info("获取 深市 股票数量")
         pprint.pprint(api.get_security_count(0))
         log.info("获取股票列表")
-        stocks = api.get_security_list(1, 255)
+        stocks = api.get_security_list(0, 9298)
         pprint.pprint(stocks)
         log.info("获取指数k线")
         data = api.get_index_bars(9, 1, '000001', 1, 2)
